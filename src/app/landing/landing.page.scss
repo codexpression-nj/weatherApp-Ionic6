@@ -1,0 +1,24 @@
+.detail{
+    position: absolute;
+    bottom: 5%;
+    margin: 50px;
+    text-align: center;
+
+    p{
+        color: white;
+        font-size: 1em;
+        font-weight: 300;
+    }
+    span{
+        color: white;
+        font-size: 1.3em;
+        font-weight: 500;
+    }
+}
+
+img{
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+}

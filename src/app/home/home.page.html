@@ -1,20 +1,51 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+<ion-content  [fullscreen]="true">
+ <div>
+   <div style="text-align: center; margin: 15px;">
+    <ion-label style="font-weight: 400;font-size: 1.5em;">Weather Forecast</ion-label>
+   </div>
+
+   <ion-searchbar class="searchBar" placeholder="Search for city" animated></ion-searchbar>
+
+  <ion-card class="card">
+
+    <ion-item  lines="none">
+      <p slot="start" style="font-weight: 500;color: white;">Today's Report</p>
+      <ion-label  id="date" slot="end">{{todayDay | date :  "EEE dd MMM" }}</ion-label>
+      <!-- <span>{{todayDay | date :  "EEE dd MMM" }}</span> -->
+    </ion-item>
+
+    <ion-item lines="none">
+     <span id="temp">
+       {{(weatherTemp?.temp -  273.15).toFixed(0) }} 
+     </span>
+     <span style="font-size: 1.5em; font-weight: bold;color: #F6B844;margin-bottom: 25px;">o</span>
+
+     <img slot="end" [src]=icon width="180spx" height="200px"/>
+
+
+    </ion-item>
+    <ion-item lines="none">
+      <ion-icon id="locationIcon" name="location"></ion-icon>
+      <span id="location">Johannesburg</span>
+    </ion-item>
+
+  </ion-card>
+
+  <ion-card class="detailCard">
+    <ion-item>
+      <span>Maximum Temp</span>
+      <span slot="end">{{(weatherTemp.temp_max -  273.15).toFixed(0)}}</span>
+    </ion-item>
+    <ion-item>
+      <span>Manimum Temp</span>
+      <span slot="end">{{(weatherTemp.temp_min -  273.15).toFixed(0)}}</span>
+    </ion-item>
+    <ion-item>
+      <span>Humidity</span>
+      <span slot="end">{{weatherTemp.humidity }}</span>
+    </ion-item>
+  </ion-card>
+ </div>
 </ion-content>

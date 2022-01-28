@@ -1,18 +1,26 @@
 #container {
-  text-align: center;
+  // --ion-background-color: #afd4da;
 
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
 }
+ion-content{
 
+}
 #container strong {
   font-size: 20px;
   line-height: 26px;
 }
+.searchBar{
+  --ion-background-color: #3B7E88;
+  border-radius: 20px;
+  padding: 15px;
+  color: white;
+  padding-bottom: 0;
 
+
+}
+searchbar-search-icon.sc-ion-searchbar-md{
+  color: white !important ;
+} 
 #container p {
   font-size: 16px;
   line-height: 22px;
@@ -25,3 +33,40 @@
 #container a {
   text-decoration: none;
 }
+
+.card{
+  // height: 350px
+  border-radius: 20px;
+  --ion-background-color: #3B7E88;
+}
+
+#temp{
+  font-weight: 300;
+  font-size: 4em;
+  color: white;
+  margin: 5px;
+}
+
+#location{
+  color: white  ;
+}
+#locationIcon{
+  color: #F6B844;
+  margin: 10px;
+}
+#date{
+  color: #F6B844;
+}
+
+.detailCard{
+  --ion-background-color: #3B7E88;
+  border-radius: 20px;
+
+  span{
+    color: white;
+    font-weight: 300;
+  }
+
+}
+
+
