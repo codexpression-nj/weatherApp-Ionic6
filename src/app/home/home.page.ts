@@ -1,9 +1,10 @@
 import { environment } from './../../environments/environment';
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
+import { env } from 'process';
  
-const API_ULR = environment.API_URL;
-const API_KEY = environment.API_KEY;
+const API_ULR = env.API_URL;
+const API_KEY = env.API_KEY;
 
 @Component({
   selector: 'app-home',
